@@ -10,3 +10,8 @@
 *.lai
 *.la
 *.a
+
+/build
+/msg_gen
+/srv_gen
+/src
