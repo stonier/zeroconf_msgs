@@ -28,10 +28,5 @@ add_service_files(
 
 generate_messages(DEPENDENCIES std_msgs)
 
-catkin_package(INCLUDE_DIRS include)
-
-install(DIRECTORY include/zeroconf_comms/
-  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-  PATTERN "*.h")
-
+catkin_package()
 
