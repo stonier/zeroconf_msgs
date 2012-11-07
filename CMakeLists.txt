@@ -2,21 +2,36 @@
 # CMake
 ##############################################################################
 
-cmake_minimum_required(VERSION 2.4.6)
-include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
+cmake_minimum_required(VERSION 2.8.3)
+project(zeroconf_comms)
 
-##############################################################################
-# Package
-##############################################################################
+find_package(catkin REQUIRED COMPONENTS genmsg std_msgs)
 
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
-set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+add_message_files(
+  DIRECTORY msg
+  FILES
+  DiscoveredService.msg
+  Protocols.msg
+  PublishedService.msg
+)
 
-##############################################################################
-# Ros
-##############################################################################
+add_service_files(
+  DIRECTORY srv
+  FILES
+  AddListener.srv
+  AddService.srv
+  ListDiscoveredServices.srv
+  ListPublishedServices.srv
+  RemoveListener.srv
+  RemoveService.srv
+)
 
-rosbuild_init()
-rosbuild_make_distribution(0.1.6)
-rosbuild_genmsg()
-rosbuild_gensrv()
+generate_messages(DEPENDENCIES std_msgs)
+
+catkin_package(INCLUDE_DIRS include)
+
+install(DIRECTORY include/zeroconf_comms/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  PATTERN "*.h")
+
+
