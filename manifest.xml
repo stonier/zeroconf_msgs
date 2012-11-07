@@ -1,8 +1,7 @@
 <package>
   <description brief="Message types for zeroconf publication and discovery">
 
-     Since we have different zeroconf implementations, the zeroconf message types are
-     gathered here.
+     Isolates ros zeroconf communications formats so they may be shared by the zeroconf implementations without requiring a tangle of dependencies.
 
   </description>
   <author>Daniel Stonier</author>
