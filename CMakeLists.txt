@@ -3,7 +3,7 @@
 ##############################################################################
 
 cmake_minimum_required(VERSION 2.8.3)
-project(zeroconf_comms)
+project(zeroconf_avahi)
 
 find_package(catkin REQUIRED COMPONENTS genmsg std_msgs)
 
