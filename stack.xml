@@ -5,7 +5,7 @@
   <author>Maintained by Daniel Stonier</author>
   <license>BSD</license>  
   <review status="experimental" notes=""/>
-  <url>http://ros.org/wiki/zeroconf_comms</url>
+  <url>http://ros.org/wiki/zeroconf_msgs</url>
   <depend stack="ros" />
   <depend stack="ros_comm" />
   <depend stack="std_msgs" />

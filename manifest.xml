@@ -8,7 +8,7 @@
   <author>Daniel Stonier</author>
   <license>BSD</license>
   <review status="api cleared" notes=""/>
-  <url>http://ros.org/wiki/zeroconf_comms</url>
+  <url>http://ros.org/wiki/zeroconf_msgs</url>
   <depend package="std_msgs"/>
   <depend package="rospy"/>
   <depend package="roscpp"/>
