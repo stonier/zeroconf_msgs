@@ -17,6 +17,6 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 ##############################################################################
 
 rosbuild_init()
-rosbuild_make_distribution(0.1.6)
+rosbuild_make_distribution(0.1.8)
 rosbuild_genmsg()
 rosbuild_gensrv()
